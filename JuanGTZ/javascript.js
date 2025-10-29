@@ -8,20 +8,18 @@ total = minutos * 10;
 var cliente = formulario.cliente.value;
 alert(cliente);
 
+//PLANES
 if (formulario.plan.value == "ST") {
-    //entra aqui porque es verdadera
     total = total + 200;
 }
 if (formulario.plan.value == "TI") {
-    //entra aqui porque es verdadera
     total = total + 450;
 }
 if (formulario.plan.value == "TITV") {
-    //entra aqui porque es verdadera
     total = total + 850;
 }
 
-
+//SERVICIOS ADICIONALES
 if (formulario.av.checked == true) {
     total = total + 30;
 }
@@ -32,6 +30,7 @@ if (formulario.sw.checked == true) {
     total = total + 40;
 }
 
+//PAQUETES
 if (formulario.select.value == "residencial") {
     total = total + 230;
 }
