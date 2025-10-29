@@ -43,11 +43,11 @@ function calcular() {
     let total = 0;
     let formulario = document.getElementById("formulario");
 
-    // Minutos
+    // Minutos//
     let minutos = parseFloat(document.getElementById("minutos").value) || 0;
     total += minutos * 1.00;
 
-    // Plan
+    // Plan//
     if (formulario.plan1.checked) {
         total += 100;
     } else if (formulario.plan2.checked) {
@@ -56,12 +56,12 @@ function calcular() {
         total += 300;
     }
 
-    // Servicios
+    // Servicios//
     if (formulario.antivirus.checked) total += 20;
     if (formulario.nube.checked) total += 150;
     if (formulario.web.checked) total += 250;
 
-    // Paquete
+    // Paquete//
     if (formulario.paquete.value == "Residencial") {
         total += 100;
     } else if (formulario.paquete.value == "PYMES") {
@@ -70,7 +70,7 @@ function calcular() {
         total += 987;
     }
 
-    // Resultado final
+    // Resultado final//
     document.getElementById("resultado").value = total.toFixed(2);
     alert("Total a pagar: $" + total.toFixed(2));
 }
